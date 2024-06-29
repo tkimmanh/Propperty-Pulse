@@ -48,7 +48,7 @@ const Navbar = () => {
     setAuthProvider();
   }, []);
 
-  console.log(providers);
+  // console.log("providers", providers);
 
   return (
     <nav className="bg-blue-700 border-b border-blue-500">
@@ -197,8 +197,10 @@ const Navbar = () => {
                     <span className="absolute -inset-1.5"></span>
                     <span className="sr-only">Open user menu</span>
                     <Image
+                      width={32}
+                      height={32}
                       className="h-8 w-8 rounded-full"
-                      src={profileDefault}
+                      src={session?.user?.image || profileDefault}
                       alt=""
                     />
                   </button>
